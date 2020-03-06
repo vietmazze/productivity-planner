@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/productivity-planner/static/css/main.5f361e03.chunk.css",
+    "main.js": "/productivity-planner/static/js/main.76d7fab0.chunk.js",
+    "main.js.map": "/productivity-planner/static/js/main.76d7fab0.chunk.js.map",
+    "runtime-main.js": "/productivity-planner/static/js/runtime-main.6cb0376d.js",
+    "runtime-main.js.map": "/productivity-planner/static/js/runtime-main.6cb0376d.js.map",
+    "static/js/2.02047af0.chunk.js": "/productivity-planner/static/js/2.02047af0.chunk.js",
+    "static/js/2.02047af0.chunk.js.map": "/productivity-planner/static/js/2.02047af0.chunk.js.map",
+    "index.html": "/productivity-planner/index.html",
+    "precache-manifest.39ef7d818360a07bc2751401ca2ff8ed.js": "/productivity-planner/precache-manifest.39ef7d818360a07bc2751401ca2ff8ed.js",
+    "service-worker.js": "/productivity-planner/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/productivity-planner/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.02047af0.chunk.js.LICENSE.txt": "/productivity-planner/static/js/2.02047af0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6cb0376d.js",
+    "static/js/2.02047af0.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.76d7fab0.chunk.js"
+  ]
+}
