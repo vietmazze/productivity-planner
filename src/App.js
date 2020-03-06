@@ -1,10 +1,6 @@
 import React from "react";
 import "./App.css";
-import gaybear from "./img/gaybear.png";
-import gayhand from "./img/gayhand.png";
-import casanovaiq from "./img/casanovaiq.png";
-import corona from "./img/corona.png";
-import bitcoin from "./img/bitcoin.png";
+
 function App() {
   return (
     <div className='App'>
