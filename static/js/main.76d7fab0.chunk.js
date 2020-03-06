@@ -1,2 +1,0 @@
-(this["webpackJsonpproductivity-planner"]=this["webpackJsonpproductivity-planner"]||[]).push([[0],[,,,function(n,e,t){n.exports=t(10)},,,,,function(n,e,t){},function(n,e,t){},function(n,e,t){"use strict";t.r(e);var r=t(0),a=t.n(r),c=t(2),i=t.n(c);t(8),t(9);var o=function(){return a.a.createElement("div",{className:"App"},a.a.createElement("h1",null," Productivity planner"))};i.a.render(a.a.createElement(o,null),document.getElementById("root"))}],[[3,1,2]]]);
-//# sourceMappingURL=main.76d7fab0.chunk.js.map
