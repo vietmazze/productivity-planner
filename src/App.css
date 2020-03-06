@@ -11,6 +11,11 @@
   color: #61dafb;
 }
 
+.react-player {
+  position: absolute;
+  left: 650px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
