@@ -7,7 +7,11 @@ const Schedule = () => {
       today.getMonth() + 1 + "-" + today.getDate() + "-" + today.getFullYear();
   return (
     <div>
-      <p className='text-purple-600 pt-5 text-lg  text-center '>
+      <h1 className='font-serif text-center text-gray-700 text-2xl'>
+        {" "}
+        Productivity Planner{" "}
+      </h1>
+      <p className='font-serif text-gray-700 pt-5 text-lg  text-center '>
         Date: {date123}{" "}
       </p>
     </div>
