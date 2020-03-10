@@ -41,8 +41,8 @@ body {
   white-space: normal;
 }
 
-#textInput {
-  height: 30px;
+.textarea {
+  height: auto;
   margin-bottom: 0;
   margin: 0 4px;
   padding: 0 4px;
@@ -54,6 +54,8 @@ body {
   border-right: 1px solid black;
   outline: none;
   overflow: hidden;
+  resize: none;
+
 }
 
 main {
