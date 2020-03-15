@@ -1,6 +1,6 @@
 import React from "react";
 
-import Quote from "../components/quote";
+import Quote from "../components/Quote";
 
 export default {
   title: "Quote",

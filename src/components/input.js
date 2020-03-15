@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+// Need to fix the events change with useEffect to change the sizing
+// Need to switch to better DND
 const Input = () => {
   const [value, setValue] = useState("");
   const [rows, setRows] = useState(5);
@@ -40,11 +42,11 @@ const Input = () => {
     <div className=''>
       <textarea
         name=''
-        id='textInput'
+        id=''
         cols='30'
         rows={rows}
         value={value}
-        className='textarea'
+        className=''
         placeholder='Create your session'
         onChange={handleChange}
       ></textarea>
