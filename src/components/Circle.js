@@ -17,7 +17,7 @@ function Circle() {
   };
 
   return (
-    <div className='flex flex-row'>
+    <div className='flex flex-row px-2'>
       <button
         id=''
         name='circle'

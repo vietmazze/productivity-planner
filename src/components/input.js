@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-// Need to fix the events change with useEffect to change the sizing
-// Need to switch to better DND
-const Input = () => {
-  const [value, setValue] = useState("");
-  const [rows, setRows] = useState(5);
-  const [minRows, setMinRows] = useState(5);
-  const [maxRows, setMaxRows] = useState(10);
+class ResizableTextarea extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "",
+      rows: 2,
+      minRows: 2,
+      maxRows: 5
+    };
+  }
 
-  const handleChange = event => {
+  handleChange = event => {
     const textareaLineHeight = 24;
+    const { minRows, maxRows } = this.state;
 
     const previousRows = event.target.rows;
-    setMinRows(event.target.rows); // reset number of rows in textarea
+    event.target.rows = minRows; // reset number of rows in textarea
 
     const currentRows = ~~(event.target.scrollHeight / textareaLineHeight);
 
@@ -21,37 +25,28 @@ const Input = () => {
     }
 
     if (currentRows >= maxRows) {
-      setMaxRows(event.target.rows);
+      event.target.rows = maxRows;
       event.target.scrollTop = event.target.scrollHeight;
     }
 
-    setValue(event.target.value);
-    if (currentRows < maxRows) {
-      setRows(currentRows);
-    } else {
-      setRows(maxRows);
-    }
+    this.setState({
+      value: event.target.value,
+      rows: currentRows < maxRows ? currentRows : maxRows
+    });
   };
 
-  // useEffect(() => {
-  //   console.log(rows);
-  //   // eslint-disable-next-line
-  // }, [rows]);
-
-  return (
-    <div className=''>
+  render() {
+    return (
       <textarea
-        name=''
-        id=''
-        cols='30'
-        rows={rows}
-        value={value}
-        className=''
-        placeholder='Create your session'
-        onChange={handleChange}
-      ></textarea>
-    </div>
-  );
-};
+        rows={this.state.rows}
+        value={this.state.value}
+        cols='40'
+        placeholder={"Enter your text here..."}
+        className='border-solid border border-orange-500 outline-none resize-none '
+        onChange={this.handleChange}
+      />
+    );
+  }
+}
 
-export default Input;
+export default ResizableTextarea;

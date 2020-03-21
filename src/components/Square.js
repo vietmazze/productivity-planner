@@ -4,7 +4,7 @@ import React from "react";
 // Enter should get us out of the input?
 function Square() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col px-12 '>
       <input
         type='text'
         id=''

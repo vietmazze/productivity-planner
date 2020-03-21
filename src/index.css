@@ -25,7 +25,7 @@
 .squarebox {
   border: 2px solid red;
   border-radius: 4px;
-  margin: 4px 6px;
+  margin: 0px 6px;
   cursor: text;
   height: 25px;
   width: 25px;
