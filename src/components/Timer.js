@@ -1,23 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import moment from "moment";
 
-function Timer(props) {
-  const [isSession, setIsSession] = useState(true);
-  const [timerSecond, setTimerSecond] = useState(0);
+const Timer = ({ currentMode, currentTime }) => {
+  const [mode] = currentMode;
+  const [time] = currentTime;
 
   return (
     <div>
-      <h4 className='text-xl'>{isSession === true ? " Session" : "Break"}</h4>
-      <span className=''>{props.timerMinute}</span>
-      <span>:</span>
-      <span className=''>
-        {timerSecond === 0
-          ? "00"
-          : timerSecond < 10
-          ? "0" + timerSecond
-          : timerSecond}
-      </span>
+      <h2 className="text-xl">{mode === "session" ? "Session" : "Break"}</h2>
+      <h3>{moment(time).format("mm:ss")}</h3>
     </div>
   );
-}
+};
 
 export default Timer;

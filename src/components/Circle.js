@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
-
+import Pomodoro from "./Pomodoro";
 // Enable Pomodoro modal when user click on the circle
 // Change the color of circle once Pomodoro comples
 // Update the Actual square count when user complete each circle
@@ -17,19 +17,15 @@ function Circle() {
   };
 
   return (
-    <div className='flex flex-row px-2'>
+    <div className="flex flex-row px-2">
       <button
-        id=''
-        name='circle'
-        className='circledot'
+        id=""
+        name="circle"
+        className="circledot"
         onClick={openModalHandler}
       ></button>
 
-      {isShowing ? (
-        <Modal className='modal' show={isShowing} close={closeModalHandler}>
-          Testing for now
-        </Modal>
-      ) : null}
+      {isShowing ? <Pomodoro close={closeModalHandler}></Pomodoro> : null}
     </div>
   );
 }

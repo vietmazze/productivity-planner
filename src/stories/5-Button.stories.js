@@ -7,4 +7,4 @@ export default {
   component: Button
 };
 
-export const version1 = () => <Button></Button>;
+export const version1 = () => <Button>Button</Button>;

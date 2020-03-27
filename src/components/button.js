@@ -1,11 +1,11 @@
 import React from "react";
 
-const button = () => {
+const Button = props => {
   return (
     <div className=''>
-      <input type='submit' className='' value='Submit' id='button' />
+      <button type='submit'>{props.children} </button>
     </div>
   );
 };
 
-export default button;
+export default Button;
