@@ -7,7 +7,7 @@ import PomodoroControl from "./PomodoroControl";
 
 import alarm from "../sounds/alarm.mp3";
 
-const Pomodoro = ({ closeModalHandler }) => {
+const Pomodoro = ({ ModalHandler }) => {
   const [breakVal, setBreakVal] = useState(5);
   const [sessionVal, setSessionVal] = useState(25);
   const [mode, setMode] = useState("session");
@@ -43,23 +43,25 @@ const Pomodoro = ({ closeModalHandler }) => {
   };
 
   return (
-    <div className="time-wrapper">
-      <button onClick={closeModalHandler} className="closeButton">
-        X
-      </button>
-      <Timer
-        currentMode={[mode, setMode]}
-        currentTime={[time, setTime]}
-      ></Timer>
-      <PomodoroControl
-        activeStatus={[active, setActive]}
-        handleReset={handleReset}
-      />
-      <h4 className="text-center text-4xl uppercase text-red-600  ">
-        {" "}
-        Pomodoro Clock
-      </h4>
-      <audio id="beep" src={alarm} ref={beep} />
+    <div className="container mx-auto">
+      <div className="time-wrapper">
+        <button onClick={ModalHandler} className="closeButton">
+          X
+        </button>
+        <Timer
+          currentMode={[mode, setMode]}
+          currentTime={[time, setTime]}
+        ></Timer>
+        <PomodoroControl
+          activeStatus={[active, setActive]}
+          handleReset={handleReset}
+        />
+        <h4 className="text-center text-4xl uppercase text-red-600  ">
+          {" "}
+          Pomodoro Clock
+        </h4>
+        <audio id="beep" src={alarm} ref={beep} />
+      </div>
     </div>
   );
 };

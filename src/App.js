@@ -1,20 +1,35 @@
-import React from "react";
-import Schedule from "./components/schedule";
-import Quote from "./components/quote";
-
+import React, { useState, useEffect } from "react";
+import Layout from "./components/Layout";
+import Navbar from "./components/Navbar";
+import Quote from "./components/Quote";
+import Body from "./components/Body";
+import Pomodoro from "./components/Pomodoro";
 function App() {
+  const [isShowing, setisShowing] = useState(false);
+
+  const ModalHandler = () => {
+    setisShowing(!isShowing);
+    console.log("test");
+  };
+  useEffect(() => {
+    if (isShowing === true) {
+      document.getElementById("body").style.backgroundColor = "#3B1F19";
+    }
+    if (isShowing === false) {
+      document.getElementById("body").style.backgroundColor = "white";
+    }
+  }, [isShowing]);
+
   return (
-    <div className='App'>
-      <div className='container mx-auto'>
-        <div className=' grid grid-rows-1 grid-flow-row gap-2'>
-          <div className='h-32 row-span-2 '>
-            <Schedule />
-            <Quote />
-          </div>
-          <div className='h-64 row-span-5 bg-red-400'>2</div>
-          <div className='h-48 row-span-5 bg-green-400'>3</div>
-        </div>
-      </div>
+    <div className="App" id="body">
+      <Layout>
+        <Navbar />
+
+        <Quote />
+
+        <Body ModalHandler={ModalHandler} isShowing={isShowing} />
+        {isShowing ? <Pomodoro ModalHandler={ModalHandler}></Pomodoro> : null}
+      </Layout>
     </div>
   );
 }
