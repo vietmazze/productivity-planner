@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40856f20f36ea665896ec507d3b72759",
+    "revision": "301e7f8140e161e175ac77e23314170e",
     "url": "/productivity-planner/index.html"
   },
   {
-    "revision": "0368a072160f224abc98",
-    "url": "/productivity-planner/static/css/main.c5a69df0.chunk.css"
+    "revision": "66432070c6817d0eefb3",
+    "url": "/productivity-planner/static/css/main.bb2d9a8a.chunk.css"
   },
   {
-    "revision": "f2b1bbb6ccf2246454cc",
-    "url": "/productivity-planner/static/js/2.a7dfac5e.chunk.js"
+    "revision": "543bc9759e1d7d3d0af6",
+    "url": "/productivity-planner/static/js/2.bc0abcc2.chunk.js"
   },
   {
     "revision": "5356fa2f66e46e6c05e4cbe319ac7f1d",
-    "url": "/productivity-planner/static/js/2.a7dfac5e.chunk.js.LICENSE.txt"
+    "url": "/productivity-planner/static/js/2.bc0abcc2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0368a072160f224abc98",
-    "url": "/productivity-planner/static/js/main.558ec612.chunk.js"
+    "revision": "66432070c6817d0eefb3",
+    "url": "/productivity-planner/static/js/main.ee80f3b3.chunk.js"
   },
   {
     "revision": "e3af7d8140c5bc3f82f5",
