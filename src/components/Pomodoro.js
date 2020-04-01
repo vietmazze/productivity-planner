@@ -7,9 +7,9 @@ import PomodoroControl from "./PomodoroControl";
 
 import alarm from "../sounds/alarm.mp3";
 
-const Pomodoro = ({ ModalHandler }) => {
-  const [breakVal, setBreakVal] = useState(5);
-  const [sessionVal, setSessionVal] = useState(25);
+const Pomodoro = ({ ModalHandler, circleStyling, setCircleStyling }) => {
+  const [breakVal, setBreakVal] = useState(1);
+  const [sessionVal, setSessionVal] = useState(1);
   const [mode, setMode] = useState("session");
   const [time, setTime] = useState(sessionVal * 60 * 1000);
   const [active, setActive] = useState(false);
@@ -29,6 +29,8 @@ const Pomodoro = ({ ModalHandler }) => {
       beep.current.play();
       setMode("session");
       setTime(sessionVal * 60 * 1000);
+      setCircleStyling("circledot-close");
+      ModalHandler();
     }
   }, [time, breakVal, sessionVal, mode]);
 

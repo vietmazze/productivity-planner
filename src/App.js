@@ -9,7 +9,6 @@ function App() {
 
   const ModalHandler = () => {
     setisShowing(!isShowing);
-    console.log("test");
   };
   useEffect(() => {
     if (isShowing === true) {

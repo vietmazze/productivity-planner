@@ -3,63 +3,38 @@ import Square from "./Square";
 import Circle from "./Circle";
 import Input from "./Input";
 function Body({ ModalHandler, isShowing }) {
+  const taskNames = [
+    { id: 1, task: "MOST IMPORTANT TASK OF THE DAY" },
+    {
+      id: 2,
+      task: "SECONDARY TASK OF IMPORTANT"
+    },
+    {
+      id: 3,
+      task: " TERTIARY TASK OF IMPORTANT"
+    },
+    { id: 4, task: "ADDTIONAL TASKS" }
+  ];
   return (
     <div>
-      <div className=" row-span-5 ">
-        <h1 className="text-xl font-bold">MOST IMPORTANT TASK OF THE DAY</h1>
-        <div className="flex flex-row relative">
-          <Input />
+      {taskNames.map(child => {
+        {
+          return (
+            <div id={`${child.id}`} className=" row-span-5 ">
+              <h1 className="text-xl font-bold">{child.task}</h1>
+              <div className="flex flex-row relative">
+                <Input />
 
-          <Square />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Square />
-        </div>
-      </div>
-      <div className=" row-span-5 ">
-        <h1 className="text-xl font-bold">SECONDARY TASKS OF IMPORTANCE</h1>
-        <div className="flex flex-row relative">
-          <Input />
-
-          <Square />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Square />
-        </div>
-
-        <br></br>
-        <div className="flex flex-row relative">
-          <Input />
-
-          <Square />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Square />
-        </div>
-      </div>
-      <div className=" row-span-5 ">
-        <h1 className="text-xl font-bold">ADDTIONAL TASKS</h1>
-        <div className="flex flex-row relative">
-          <Input />
-
-          <Square />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-          <Square />
-        </div>
-      </div>
+                <div className="floatObject flex flex-row">
+                  <Square></Square>
+                  <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
+                  <Square />
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
     </div>
   );
 }
