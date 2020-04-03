@@ -2,7 +2,7 @@ import React from "react";
 import Square from "./Square";
 import Circle from "./Circle";
 import Input from "./Input";
-function Body({ ModalHandler, isShowing }) {
+const Body = ({ ModalHandler, isShowing, circle }) => {
   const taskNames = [
     { id: 1, task: "MOST IMPORTANT TASK OF THE DAY" },
     {
@@ -16,7 +16,7 @@ function Body({ ModalHandler, isShowing }) {
     { id: 4, task: "ADDTIONAL TASKS" }
   ];
   return (
-    <div>
+    <div id="nonclock">
       {taskNames.map(child => {
         {
           return (
@@ -26,9 +26,13 @@ function Body({ ModalHandler, isShowing }) {
                 <Input />
 
                 <div className="floatObject flex flex-row">
-                  <Square></Square>
-                  <Circle ModalHandler={ModalHandler} isShowing={isShowing} />
-                  <Square />
+                  <Square inputName={`Target`}></Square>
+                  <Circle
+                    ModalHandler={ModalHandler}
+                    isShowing={isShowing}
+                    circle={circle}
+                  />
+                  <Square inputName={`Actual`} />
                 </div>
               </div>
             </div>
@@ -37,6 +41,6 @@ function Body({ ModalHandler, isShowing }) {
       })}
     </div>
   );
-}
+};
 
 export default Body;

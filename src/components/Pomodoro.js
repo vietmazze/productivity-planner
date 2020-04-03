@@ -7,9 +7,9 @@ import PomodoroControl from "./PomodoroControl";
 
 import alarm from "../sounds/alarm.mp3";
 
-const Pomodoro = ({ ModalHandler, circleStyling, setCircleStyling }) => {
-  const [breakVal, setBreakVal] = useState(1);
-  const [sessionVal, setSessionVal] = useState(1);
+const Pomodoro = ({ ModalHandler, circle, setCircle }) => {
+  const [breakVal, setBreakVal] = useState(5);
+  const [sessionVal, setSessionVal] = useState(25);
   const [mode, setMode] = useState("session");
   const [time, setTime] = useState(sessionVal * 60 * 1000);
   const [active, setActive] = useState(false);
@@ -23,16 +23,15 @@ const Pomodoro = ({ ModalHandler, circleStyling, setCircleStyling }) => {
   useEffect(() => {
     if (time === 0 && mode === "session") {
       beep.current.play();
+      setCircle(true);
       setMode("break");
       setTime(breakVal * 60 * 1000);
     } else if (time === 0 && mode === "break") {
       beep.current.play();
       setMode("session");
       setTime(sessionVal * 60 * 1000);
-      setCircleStyling("circledot-close");
-      ModalHandler();
     }
-  }, [time, breakVal, sessionVal, mode]);
+  }, [time, breakVal, sessionVal, mode, circle]);
 
   const handleReset = () => {
     //beep.current.pause()
@@ -46,7 +45,7 @@ const Pomodoro = ({ ModalHandler, circleStyling, setCircleStyling }) => {
 
   return (
     <div className="container mx-auto">
-      <div className="time-wrapper">
+      <div className="time-wrapper" id="clock">
         <button onClick={ModalHandler} className="closeButton">
           X
         </button>

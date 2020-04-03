@@ -13258,7 +13258,8 @@ body {
 
 .time-wrapper {
   position: absolute;
-  top: 0;
+  top: 20%;
+  left: 15%;
   background-color: #fafafa;
   height: 70%;
   width: 70%;

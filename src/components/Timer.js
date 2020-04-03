@@ -6,7 +6,7 @@ const Timer = ({ currentMode, currentTime }) => {
   const [time] = currentTime;
 
   return (
-    <div>
+    <div id="clock">
       <h2 className="text-xl">{mode === "session" ? "Session" : "Break"}</h2>
       <h3>{moment(time).format("mm:ss")}</h3>
     </div>

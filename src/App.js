@@ -4,33 +4,51 @@ import Navbar from "./components/Navbar";
 import Quote from "./components/Quote";
 import Body from "./components/Body";
 import Pomodoro from "./components/Pomodoro";
-function App() {
+const App = () => {
   const [isShowing, setisShowing] = useState(false);
-
+  const [circle, setCircle] = useState(false);
   const ModalHandler = () => {
     setisShowing(!isShowing);
   };
   useEffect(() => {
     if (isShowing === true) {
-      document.getElementById("body").style.backgroundColor = "#3B1F19";
+      document.getElementById("nonclock").style = "opacity:0.2";
+
+      document.getElementById("clock").style =
+        "border-color: red;background-color:#4CAF50;";
     }
     if (isShowing === false) {
-      document.getElementById("body").style.backgroundColor = "white";
+      document.getElementById("nonclock").style =
+        "backgroundColor:white; opacity:1";
     }
   }, [isShowing]);
 
   return (
-    <div className="App" id="body">
-      <Layout>
-        <Navbar />
+    <div className="App">
+      <div>
+        <Layout>
+          <Navbar />
 
-        <Quote />
+          <Quote />
 
-        <Body ModalHandler={ModalHandler} isShowing={isShowing} />
-        {isShowing ? <Pomodoro ModalHandler={ModalHandler}></Pomodoro> : null}
-      </Layout>
+          <Body
+            ModalHandler={ModalHandler}
+            isShowing={isShowing}
+            circle={circle}
+          />
+          {isShowing ? (
+            <Pomodoro
+              ModalHandler={ModalHandler}
+              circle={circle}
+              setCircle={setCircle}
+            >
+              {" "}
+            </Pomodoro>
+          ) : null}
+        </Layout>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

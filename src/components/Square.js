@@ -2,9 +2,9 @@ import React from "react";
 
 // Need to work on implement onClick event to save data
 // Enter should get us out of the input?
-function Square(props) {
+function Square({ inputName }) {
   return (
-    <div className="flex flex-col px-12 ">
+    <div className="flex flex-col px-12 " id="nonclock">
       <input
         type="text"
         id=""
@@ -13,7 +13,7 @@ function Square(props) {
         onKeyDown={console.log("test")}
         tabIndex="0"
       />
-      <label className="font-semibold text-xs text-center">Target</label>
+      <label className="font-semibold text-xs text-center">{inputName}</label>
     </div>
   );
 }
