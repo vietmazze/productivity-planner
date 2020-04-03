@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/productivity-planner/static/css/main.bb2d9a8a.chunk.css",
-    "main.js": "/productivity-planner/static/js/main.ee80f3b3.chunk.js",
-    "main.js.map": "/productivity-planner/static/js/main.ee80f3b3.chunk.js.map",
+    "main.css": "/productivity-planner/static/css/main.31542e58.chunk.css",
+    "main.js": "/productivity-planner/static/js/main.bd27871b.chunk.js",
+    "main.js.map": "/productivity-planner/static/js/main.bd27871b.chunk.js.map",
     "runtime-main.js": "/productivity-planner/static/js/runtime-main.6cb0376d.js",
     "runtime-main.js.map": "/productivity-planner/static/js/runtime-main.6cb0376d.js.map",
     "static/js/2.bc0abcc2.chunk.js": "/productivity-planner/static/js/2.bc0abcc2.chunk.js",
     "static/js/2.bc0abcc2.chunk.js.map": "/productivity-planner/static/js/2.bc0abcc2.chunk.js.map",
     "index.html": "/productivity-planner/index.html",
-    "precache-manifest.917de34cccfecc1704f7f69e91129e87.js": "/productivity-planner/precache-manifest.917de34cccfecc1704f7f69e91129e87.js",
+    "precache-manifest.c5d141cd8066b530ffccf4b536ae5f0d.js": "/productivity-planner/precache-manifest.c5d141cd8066b530ffccf4b536ae5f0d.js",
     "service-worker.js": "/productivity-planner/service-worker.js",
-    "static/css/main.bb2d9a8a.chunk.css.map": "/productivity-planner/static/css/main.bb2d9a8a.chunk.css.map",
+    "static/css/main.31542e58.chunk.css.map": "/productivity-planner/static/css/main.31542e58.chunk.css.map",
     "static/js/2.bc0abcc2.chunk.js.LICENSE.txt": "/productivity-planner/static/js/2.bc0abcc2.chunk.js.LICENSE.txt",
     "static/media/alarm.mp3": "/productivity-planner/static/media/alarm.61eb5a40.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.6cb0376d.js",
     "static/js/2.bc0abcc2.chunk.js",
-    "static/css/main.bb2d9a8a.chunk.css",
-    "static/js/main.ee80f3b3.chunk.js"
+    "static/css/main.31542e58.chunk.css",
+    "static/js/main.bd27871b.chunk.js"
   ]
 }
