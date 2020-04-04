@@ -7,6 +7,7 @@ import Pomodoro from "./components/Pomodoro";
 const App = () => {
   const [isShowing, setisShowing] = useState(false);
   const [circle, setCircle] = useState(false);
+
   const ModalHandler = () => {
     setisShowing(!isShowing);
   };
@@ -22,6 +23,17 @@ const App = () => {
         "backgroundColor:white; opacity:1";
     }
   }, [isShowing]);
+
+  useEffect(() => {
+    var timeValue = localStorage.getItem("time");
+    if (timeValue === null) {
+      var oneday = new Date();
+      oneday.setHours(oneday.getHours() + 24);
+      localStorage.setItem("time", oneday);
+    } else if (timeValue < new Date()) {
+      localStorage.clear();
+    }
+  });
 
   return (
     <div className="App">

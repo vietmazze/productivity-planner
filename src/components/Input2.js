@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Need to fix the events change with useEffect to change the sizing
 // Need to switch to better DND
-const Input = () => {
-  const [value, setValue] = useState("");
-  const [rows, setRows] = useState(5);
-  const [minRows, setMinRows] = useState(5);
-  const [maxRows, setMaxRows] = useState(10);
+const Input = ({ id, taskValue }) => {
+  const [value, setValue] = useState(localStorage.getItem(`${id}`));
+  const [rows, setRows] = useState(2);
+  const [minRows, setMinRows] = useState(2);
+  const [maxRows, setMaxRows] = useState(2);
 
   const handleChange = event => {
-    event.preventDefault();
     const textareaLineHeight = 24;
 
     const previousRows = event.target.rows;
@@ -27,22 +26,28 @@ const Input = () => {
     }
 
     setValue(event.target.value);
-    setRows(currentRows);
+
+    currentRows < maxRows ? setRows(currentRows) : setRows(maxRows);
   };
 
-  // useEffect(() => {
-  //   handleChange();
-  // }, [rows]);
+  useEffect(() => {
+    setMinRows(minRows);
+    setMaxRows(maxRows);
+    setRows(rows);
+    setValue(value);
+    localStorage.setItem(`${id}`, value);
+  }, [minRows, maxRows, rows, value]);
 
   return (
-    <div className=''>
+    <div tabIndex="0">
       <textarea
-        name=''
-        id=''
+        name=""
+        id={id}
+        cols="40"
         rows={rows}
         value={value}
-        className=''
-        placeholder='Create your session'
+        className="border-solid border border-orange-500 outline-none resize-none"
+        placeholder="Create your session"
         onChange={handleChange}
       ></textarea>
     </div>

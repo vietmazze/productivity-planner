@@ -5,13 +5,13 @@ import React, { useState, useEffect } from "react";
 // Update the Actual square count when user complete each circle
 //
 const Circle = ({ ModalHandler, circle }) => {
-  const [inactiveCircle, setInactiveCircle] = useState("circle1");
+  const [inactiveCircle, setInactiveCircle] = useState();
   const circleIds = [
-    { id: "circle1", active: true },
-    { id: "circle2", active: true },
-    { id: "circle3", active: true },
-    { id: "circle4", active: true },
-    { id: "circle5", active: true }
+    { id: 1, active: true },
+    { id: 2, active: true },
+    { id: 3, active: true },
+    { id: 4, active: true },
+    { id: 5, active: true }
   ];
 
   const OnSubmit = e => {
@@ -26,9 +26,7 @@ const Circle = ({ ModalHandler, circle }) => {
   };
 
   // useEffect(() => {
-  //   if (circle == true) {
-  //     document.getElementById(inactiveCircle).className = "circledot-close";
-  //   }
+  //   setInactiveCircle(inactiveCircle);
   // }, [OnSubmit, inactiveCircle]);
 
   return (
