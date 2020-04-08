@@ -23,10 +23,10 @@ const Pomodoro = ({ ModalHandler, circle, setCircle }) => {
   useEffect(() => {
     if (time === 0 && mode === "session") {
       beep.current.play();
-      setCircle(true);
       setMode("break");
       setTime(breakVal * 60 * 1000);
     } else if (time === 0 && mode === "break") {
+      setCircle(true);
       beep.current.play();
       setMode("session");
       setTime(sessionVal * 60 * 1000);

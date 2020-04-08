@@ -10,7 +10,6 @@ function Square({ inputName }) {
         id=""
         name="target"
         className="squarebox text-xs text-center "
-        onKeyDown={console.log("test")}
         tabIndex="0"
       />
       <label className="font-semibold text-xs text-center">{inputName}</label>

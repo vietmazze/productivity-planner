@@ -8,7 +8,7 @@ const Input = ({ id, taskValue }) => {
   const [minRows, setMinRows] = useState(2);
   const [maxRows, setMaxRows] = useState(2);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const textareaLineHeight = 24;
 
     const previousRows = event.target.rows;
@@ -30,6 +30,11 @@ const Input = ({ id, taskValue }) => {
     currentRows < maxRows ? setRows(currentRows) : setRows(maxRows);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.charCode == 13) {
+      e.currentTarget.blur();
+    }
+  };
   useEffect(() => {
     setMinRows(minRows);
     setMaxRows(maxRows);
@@ -40,16 +45,19 @@ const Input = ({ id, taskValue }) => {
 
   return (
     <div tabIndex="0">
-      <textarea
-        name=""
-        id={id}
-        cols="40"
-        rows={rows}
-        value={value}
-        className="border-solid border border-orange-500 outline-none resize-none"
-        placeholder="Create your session"
-        onChange={handleChange}
-      ></textarea>
+      <form>
+        <textarea
+          onKeyPress={handleKeyPress}
+          name=""
+          id={id}
+          cols="40"
+          rows={rows}
+          value={value}
+          className="border-solid border border-orange-500 outline-none resize-none"
+          placeholder="Create your session"
+          onChange={handleChange}
+        ></textarea>
+      </form>
     </div>
   );
 };

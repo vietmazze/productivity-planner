@@ -7,11 +7,11 @@ class ResizableTextarea extends React.PureComponent {
       value: "",
       rows: 2,
       minRows: 2,
-      maxRows: 5
+      maxRows: 5,
     };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const textareaLineHeight = 24;
     const { minRows, maxRows } = this.state;
 
@@ -31,18 +31,19 @@ class ResizableTextarea extends React.PureComponent {
 
     this.setState({
       value: event.target.value,
-      rows: currentRows < maxRows ? currentRows : maxRows
+      rows: currentRows < maxRows ? currentRows : maxRows,
     });
   };
 
   render() {
     return (
       <textarea
+        onKeyPress={handleKeyPress}
         rows={this.state.rows}
         value={this.state.value}
-        cols='40'
+        cols="40"
         placeholder={"Enter your text here..."}
-        className='border-solid border border-orange-500 outline-none resize-none '
+        className="border-solid border border-orange-500 outline-none resize-none "
         onChange={this.handleChange}
       />
     );

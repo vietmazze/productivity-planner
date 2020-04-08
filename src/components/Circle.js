@@ -4,34 +4,45 @@ import React, { useState, useEffect } from "react";
 // Change the color of circle once Pomodoro comples
 // Update the Actual square count when user complete each circle
 //
-const Circle = ({ ModalHandler, circle }) => {
-  const [inactiveCircle, setInactiveCircle] = useState();
-  const circleIds = [
+const Circle = ({ ModalHandler, circle, setCircle }) => {
+  const [items, setItems] = useState([
     { id: 1, active: true },
     { id: 2, active: true },
     { id: 3, active: true },
     { id: 4, active: true },
-    { id: 5, active: true }
-  ];
+    { id: 5, active: true },
+  ]);
 
-  const OnSubmit = e => {
+  const OnSubmit = (e) => {
     e.preventDefault();
-    setInactiveCircle(e.target.id);
+    //setInactiveCircle(e.target.id);
     ModalHandler();
-
-    // circleIds[e.target.id - 1].active = false;
-    // if (!circleIds[e.target.id - 1].active) {
-    //   e.target.className = "circledot-close";
-    // }
+    setItems(
+      items.map((item) => ({
+        ...item,
+        active: e.target.id == item.id ? false : true,
+      }))
+    );
   };
 
   // useEffect(() => {
   //   setInactiveCircle(inactiveCircle);
-  // }, [OnSubmit, inactiveCircle]);
+  // }, [inactiveCircle]);
+
+  // useEffect(() => {
+  //   if (circle) {
+  //     setItems(
+  //       items.map((item) => ({
+  //         ...item,
+  //         active: e.target.id == item.id ? false : true,
+  //       }))
+  //     );
+  //   }
+  // }, [circle]);
 
   return (
     <div className=" " id="nonclock">
-      {circleIds.map(circle => {
+      {items.map((circle) => {
         return (
           <button
             id={`${circle.id}`}

@@ -28,7 +28,7 @@ const App = () => {
     var timeValue = localStorage.getItem("time");
     if (timeValue === null) {
       var oneday = new Date();
-      oneday.setHours(oneday.getHours() + 24);
+      oneday.setHours(oneday.getHours() + 12);
       localStorage.setItem("time", oneday);
     } else if (timeValue < new Date()) {
       localStorage.clear();
@@ -47,6 +47,7 @@ const App = () => {
             ModalHandler={ModalHandler}
             isShowing={isShowing}
             circle={circle}
+            setCircle={setCircle}
           />
           {isShowing ? (
             <Pomodoro

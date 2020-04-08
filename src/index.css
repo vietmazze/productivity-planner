@@ -13297,6 +13297,15 @@ body {
   left: 0;
 }
 
+body {
+  background-image: url("./img/dawn.jpeg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

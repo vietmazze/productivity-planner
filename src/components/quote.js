@@ -5,31 +5,31 @@ const Quote = () => {
     {
       quote:
         "Simplicity boils down to two steps: Identify the essential. Eliminate the rest",
-      author: "Leo Babauta"
+      author: "Leo Babauta",
     },
     {
       quote: "Continuous improvement is better than delayed perfection",
-      author: "Mark Twain"
+      author: "Mark Twain",
     },
     {
-      quote: "Quality means dooing it right when no one is looking",
-      author: "Henry Ford"
+      quote: "Quality means doing it right when no one is looking",
+      author: "Henry Ford",
     },
     {
       quote:
         "To succeed in your mission, you must have single-minded devotion to your goal",
-      author: "A.P.J Abdul Kalam"
+      author: "A.P.J Abdul Kalam",
     },
     {
       quote:
         "The best way to improve your self-control is to see how and why you lose control",
-      author: "Kelly McGonigal"
+      author: "Kelly McGonigal",
     },
     {
       quote:
         "It is possible to commit no mistakes and still lose. That is not a weakness; that is life",
-      author: "Jean-Luc Picard"
-    }
+      author: "Jean-Luc Picard",
+    },
   ];
 
   function shuffleArray(array) {
@@ -42,7 +42,7 @@ const Quote = () => {
 
   const randomized = shuffleArray(quotes);
   return (
-    <blockquote className="font-sans text-lg  text-center .italic text-orange-500 pt-8">
+    <blockquote className="font-sans text-xl antialiased font-bold text-center .italic text-blue-800 pt-8">
       {quotes[randomized].quote}
       <footer className="">{quotes[randomized].author}</footer>
     </blockquote>
