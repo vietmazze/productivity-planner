@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/productivity-planner/static/css/main.31542e58.chunk.css",
-    "main.js": "/productivity-planner/static/js/main.e4acffcc.chunk.js",
-    "main.js.map": "/productivity-planner/static/js/main.e4acffcc.chunk.js.map",
+    "main.css": "/productivity-planner/static/css/main.0aa1f4dd.chunk.css",
+    "main.js": "/productivity-planner/static/js/main.011d3e87.chunk.js",
+    "main.js.map": "/productivity-planner/static/js/main.011d3e87.chunk.js.map",
     "runtime-main.js": "/productivity-planner/static/js/runtime-main.6cb0376d.js",
     "runtime-main.js.map": "/productivity-planner/static/js/runtime-main.6cb0376d.js.map",
-    "static/js/2.f33aaf61.chunk.js": "/productivity-planner/static/js/2.f33aaf61.chunk.js",
-    "static/js/2.f33aaf61.chunk.js.map": "/productivity-planner/static/js/2.f33aaf61.chunk.js.map",
+    "static/js/2.a8658443.chunk.js": "/productivity-planner/static/js/2.a8658443.chunk.js",
+    "static/js/2.a8658443.chunk.js.map": "/productivity-planner/static/js/2.a8658443.chunk.js.map",
     "index.html": "/productivity-planner/index.html",
-    "precache-manifest.ab5cb4012a2aacfb7c1772d07c8e1c58.js": "/productivity-planner/precache-manifest.ab5cb4012a2aacfb7c1772d07c8e1c58.js",
+    "precache-manifest.f8495ab906e91322ada988d58f7fa438.js": "/productivity-planner/precache-manifest.f8495ab906e91322ada988d58f7fa438.js",
     "service-worker.js": "/productivity-planner/service-worker.js",
-    "static/css/main.31542e58.chunk.css.map": "/productivity-planner/static/css/main.31542e58.chunk.css.map",
-    "static/js/2.f33aaf61.chunk.js.LICENSE.txt": "/productivity-planner/static/js/2.f33aaf61.chunk.js.LICENSE.txt",
-    "static/media/alarm.mp3": "/productivity-planner/static/media/alarm.61eb5a40.mp3"
+    "static/css/main.0aa1f4dd.chunk.css.map": "/productivity-planner/static/css/main.0aa1f4dd.chunk.css.map",
+    "static/js/2.a8658443.chunk.js.LICENSE.txt": "/productivity-planner/static/js/2.a8658443.chunk.js.LICENSE.txt",
+    "static/media/alarm.mp3": "/productivity-planner/static/media/alarm.61eb5a40.mp3",
+    "static/media/index.css": "/productivity-planner/static/media/dawn.523e8c83.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.6cb0376d.js",
-    "static/js/2.f33aaf61.chunk.js",
-    "static/css/main.31542e58.chunk.css",
-    "static/js/main.e4acffcc.chunk.js"
+    "static/js/2.a8658443.chunk.js",
+    "static/css/main.0aa1f4dd.chunk.css",
+    "static/js/main.011d3e87.chunk.js"
   ]
 }
