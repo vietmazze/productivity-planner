@@ -2,7 +2,7 @@ import React from "react";
 
 // Need to work on implement onClick event to save data
 // Enter should get us out of the input?
-function Square({ inputName }) {
+function Square({ inputName, actual }) {
   return (
     <div className="flex flex-col px-12 " id="nonclock">
       <input

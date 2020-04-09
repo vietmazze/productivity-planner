@@ -2,7 +2,7 @@ import React from "react";
 import Square from "./Square";
 import Circle from "./Circle";
 import Input from "./Input2";
-const Body = ({ ModalHandler, isShowing, circle, setCircle }) => {
+const Body = ({ ModalHandler, isShowing, circle, setCircle, actual }) => {
   const taskNames = [
     {
       id: 1,
@@ -36,7 +36,7 @@ const Body = ({ ModalHandler, isShowing, circle, setCircle }) => {
                     circle={circle}
                     setCircle={setCircle}
                   />
-                  <Square inputName={`Actual`} />
+                  <Square inputName={`Actual`} actual={actual} />
                 </div>
               </div>
             </div>

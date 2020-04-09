@@ -12,33 +12,26 @@ const Circle = ({ ModalHandler, circle, setCircle }) => {
     { id: 4, active: true },
     { id: 5, active: true },
   ]);
+  const [currentId, setCurrentId] = useState();
 
+  //onClick event to open the Modal Pomodoro
   const OnSubmit = (e) => {
     e.preventDefault();
-    //setInactiveCircle(e.target.id);
     ModalHandler();
-    setItems(
-      items.map((item) => ({
-        ...item,
-        active: e.target.id == item.id ? false : true,
-      }))
-    );
+    setCurrentId(e.target.id);
   };
 
-  // useEffect(() => {
-  //   setInactiveCircle(inactiveCircle);
-  // }, [inactiveCircle]);
-
-  // useEffect(() => {
-  //   if (circle) {
-  //     setItems(
-  //       items.map((item) => ({
-  //         ...item,
-  //         active: e.target.id == item.id ? false : true,
-  //       }))
-  //     );
-  //   }
-  // }, [circle]);
+  // This is to change the className based on the active of each circle's id
+  useEffect(() => {
+    if (circle) {
+      setItems(
+        items.map((item) => ({
+          ...item,
+          active: currentId == item.id ? !item.active : item.active,
+        }))
+      );
+    }
+  }, [circle, currentId]);
 
   return (
     <div className=" " id="nonclock">

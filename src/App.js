@@ -7,6 +7,7 @@ import Pomodoro from "./components/Pomodoro";
 const App = () => {
   const [isShowing, setisShowing] = useState(false);
   const [circle, setCircle] = useState(false);
+  const [actual, setActual] = useState();
 
   const ModalHandler = () => {
     setisShowing(!isShowing);
@@ -48,12 +49,17 @@ const App = () => {
             isShowing={isShowing}
             circle={circle}
             setCircle={setCircle}
+            actual={actual}
           />
           {isShowing ? (
             <Pomodoro
               ModalHandler={ModalHandler}
               circle={circle}
               setCircle={setCircle}
+              isShowing={isShowing}
+              setisShowing={setisShowing}
+              actual={actual}
+              setActual={setActual}
             >
               {" "}
             </Pomodoro>

@@ -7,19 +7,31 @@ import PomodoroControl from "./PomodoroControl";
 
 import alarm from "../sounds/alarm.mp3";
 
-const Pomodoro = ({ ModalHandler, circle, setCircle }) => {
+const Pomodoro = ({
+  ModalHandler,
+  circle,
+  setCircle,
+  isShowing,
+  setisShowing,
+  actual,
+  setActual,
+}) => {
   const [breakVal, setBreakVal] = useState(5);
   const [sessionVal, setSessionVal] = useState(25);
   const [mode, setMode] = useState("session");
   const [time, setTime] = useState(sessionVal * 60 * 1000);
   const [active, setActive] = useState(false);
   const beep = useRef();
+
+  // This useInterval allows us to update the second value every sec
   useInterval(() => setTime(time - 1000), active ? 1000 : null);
 
+  // Calling the
   useEffect(() => {
     setTime(sessionVal * 60 * 1000);
   }, [sessionVal]);
 
+  // Reset value when time changes between session and break
   useEffect(() => {
     if (time === 0 && mode === "session") {
       beep.current.play();
@@ -30,8 +42,10 @@ const Pomodoro = ({ ModalHandler, circle, setCircle }) => {
       beep.current.play();
       setMode("session");
       setTime(sessionVal * 60 * 1000);
+      setisShowing(!isShowing);
+      setActual(active == null ? 0 : active + 1);
     }
-  }, [time, breakVal, sessionVal, mode, circle]);
+  }, [time, breakVal, sessionVal, mode, circle, isShowing]);
 
   const handleReset = () => {
     //beep.current.pause()
@@ -42,6 +56,10 @@ const Pomodoro = ({ ModalHandler, circle, setCircle }) => {
     setSessionVal(25);
     setTime(25 * 60 * 1000);
   };
+
+  // useEffect(() => {
+  //   setisShowing(isShowing);
+  // }, [isShowing]);
 
   return (
     <div className="container mx-auto">
