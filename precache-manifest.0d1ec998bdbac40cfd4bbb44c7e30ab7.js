@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65d9e41c6f76cf87f7c9d064424f8504",
+    "revision": "d0a795da0b6c06a0f2b96b52fd839492",
     "url": "/productivity-planner/index.html"
   },
   {
-    "revision": "65217729ecf320d1d2c8",
+    "revision": "1637cc80133b96a2f05d",
     "url": "/productivity-planner/static/css/main.0aa1f4dd.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/productivity-planner/static/js/2.a8658443.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65217729ecf320d1d2c8",
-    "url": "/productivity-planner/static/js/main.011d3e87.chunk.js"
+    "revision": "1637cc80133b96a2f05d",
+    "url": "/productivity-planner/static/js/main.e77ce521.chunk.js"
   },
   {
     "revision": "e3af7d8140c5bc3f82f5",
