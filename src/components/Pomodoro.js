@@ -43,9 +43,18 @@ const Pomodoro = ({
       setMode("session");
       setTime(sessionVal * 60 * 1000);
       setisShowing(!isShowing);
-      setActual(active == null ? 0 : active + 1);
+      // setActual(active == null ? 0 : active + 1);
     }
-  }, [time, breakVal, sessionVal, mode, circle, isShowing]);
+  }, [
+    time,
+    breakVal,
+    sessionVal,
+    mode,
+    circle,
+    isShowing,
+    setisShowing,
+    setCircle,
+  ]);
 
   const handleReset = () => {
     //beep.current.pause()

@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 // Need to fix the events change with useEffect to change the sizing
 // Need to switch to better DND
 const Input = ({ id, taskValue }) => {
   const [value, setValue] = useState(localStorage.getItem(`${id}`));
+
   const [rows, setRows] = useState(2);
   const [minRows, setMinRows] = useState(2);
   const [maxRows, setMaxRows] = useState(2);
@@ -31,7 +32,7 @@ const Input = ({ id, taskValue }) => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.charCode == 13) {
+    if (e.charCode === 13) {
       e.currentTarget.blur();
     }
   };
@@ -53,7 +54,7 @@ const Input = ({ id, taskValue }) => {
           cols="40"
           rows={rows}
           value={value}
-          className="border-solid border border-orange-500 outline-none resize-none"
+          className="border-solid border border-orange-500 outline-none resize-none ml-5"
           placeholder="Create your session"
           onChange={handleChange}
         ></textarea>

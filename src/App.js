@@ -26,13 +26,13 @@ const App = () => {
   }, [isShowing]);
 
   useEffect(() => {
-    var timeValue = localStorage.getItem("time");
-    if (timeValue === null) {
-      var oneday = new Date();
-      oneday.setHours(oneday.getHours() + 12);
-      localStorage.setItem("time", oneday);
-    } else if (timeValue < new Date()) {
+    var lastClear = localStorage.getItem("lastClear");
+    var time_now = new Date().getHours();
+    console.log(time_now);
+    if (time_now - lastClear > 8) {
       localStorage.clear();
+
+      localStorage.setItem("lastClear", time_now);
     }
   });
 

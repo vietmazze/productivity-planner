@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Change the color of circle once Pomodoro comples
 // Update the Actual square count when user complete each circle
 //
-const Circle = ({ ModalHandler, circle, setCircle }) => {
+const Circle = ({ ModalHandler, circle }) => {
   const [items, setItems] = useState([
     { id: 1, active: true },
     { id: 2, active: true },
@@ -27,11 +27,11 @@ const Circle = ({ ModalHandler, circle, setCircle }) => {
       setItems(
         items.map((item) => ({
           ...item,
-          active: currentId == item.id ? !item.active : item.active,
+          active: currentId === item.id ? !item.active : item.active,
         }))
       );
     }
-  }, [circle, currentId]);
+  }, [circle, currentId, items]);
 
   return (
     <div className=" " id="nonclock">

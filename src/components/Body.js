@@ -21,27 +21,25 @@ const Body = ({ ModalHandler, isShowing, circle, setCircle, actual }) => {
   return (
     <div id="nonclock">
       {taskNames.map((child) => {
-        {
-          return (
-            <div id={`${child.id}`} className=" row-span-5 ">
-              <h1 className="text-xl font-bold">{child.task}</h1>
-              <div className="flex flex-row relative">
-                <Input id={child.id} />
+        return (
+          <div id={`${child.id}`} className=" row-span-5 ">
+            <h1 className="text-xl font-bold">{child.task}</h1>
+            <div className="flex flex-row relative">
+              <Input id={child.id} />
 
-                <div className="floatObject flex flex-row">
-                  <Square inputName={`Target`}></Square>
-                  <Circle
-                    ModalHandler={ModalHandler}
-                    isShowing={isShowing}
-                    circle={circle}
-                    setCircle={setCircle}
-                  />
-                  <Square inputName={`Actual`} actual={actual} />
-                </div>
+              <div className="floatObject flex flex-row">
+                <Square inputName={`Target`}></Square>
+                <Circle
+                  ModalHandler={ModalHandler}
+                  isShowing={isShowing}
+                  circle={circle}
+                  setCircle={setCircle}
+                />
+                <Square inputName={`Actual`} actual={actual} />
               </div>
             </div>
-          );
-        }
+          </div>
+        );
       })}
     </div>
   );
