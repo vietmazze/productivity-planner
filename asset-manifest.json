@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/productivity-planner/static/css/main.173b4927.chunk.css",
-    "main.js": "/productivity-planner/static/js/main.86de7595.chunk.js",
-    "main.js.map": "/productivity-planner/static/js/main.86de7595.chunk.js.map",
+    "main.css": "/productivity-planner/static/css/main.04f981fe.chunk.css",
+    "main.js": "/productivity-planner/static/js/main.f85cb4d2.chunk.js",
+    "main.js.map": "/productivity-planner/static/js/main.f85cb4d2.chunk.js.map",
     "runtime-main.js": "/productivity-planner/static/js/runtime-main.6cb0376d.js",
     "runtime-main.js.map": "/productivity-planner/static/js/runtime-main.6cb0376d.js.map",
     "static/js/2.a8658443.chunk.js": "/productivity-planner/static/js/2.a8658443.chunk.js",
     "static/js/2.a8658443.chunk.js.map": "/productivity-planner/static/js/2.a8658443.chunk.js.map",
     "index.html": "/productivity-planner/index.html",
-    "precache-manifest.f477c4343bfca44a461c4c57fd545e58.js": "/productivity-planner/precache-manifest.f477c4343bfca44a461c4c57fd545e58.js",
+    "precache-manifest.8721642dcdbadbabc9e459593f162114.js": "/productivity-planner/precache-manifest.8721642dcdbadbabc9e459593f162114.js",
     "service-worker.js": "/productivity-planner/service-worker.js",
-    "static/css/main.173b4927.chunk.css.map": "/productivity-planner/static/css/main.173b4927.chunk.css.map",
+    "static/css/main.04f981fe.chunk.css.map": "/productivity-planner/static/css/main.04f981fe.chunk.css.map",
     "static/js/2.a8658443.chunk.js.LICENSE.txt": "/productivity-planner/static/js/2.a8658443.chunk.js.LICENSE.txt",
     "static/media/alarm.mp3": "/productivity-planner/static/media/alarm.61eb5a40.mp3",
     "static/media/index.css": "/productivity-planner/static/media/dawn.523e8c83.jpeg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.6cb0376d.js",
     "static/js/2.a8658443.chunk.js",
-    "static/css/main.173b4927.chunk.css",
-    "static/js/main.86de7595.chunk.js"
+    "static/css/main.04f981fe.chunk.css",
+    "static/js/main.f85cb4d2.chunk.js"
   ]
 }
