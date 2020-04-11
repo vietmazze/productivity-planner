@@ -27,11 +27,11 @@ const Circle = ({ ModalHandler, circle }) => {
       setItems(
         items.map((item) => ({
           ...item,
-          active: currentId === item.id ? !item.active : item.active,
+          active: currentId == item.id ? !item.active : item.active,
         }))
       );
     }
-  }, [circle, currentId, items]);
+  }, [circle, currentId]);
 
   return (
     <div className=" " id="nonclock">
