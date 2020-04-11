@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/productivity-planner/static/css/main.173b4927.chunk.css",
-    "main.js": "/productivity-planner/static/js/main.0c576283.chunk.js",
-    "main.js.map": "/productivity-planner/static/js/main.0c576283.chunk.js.map",
+    "main.js": "/productivity-planner/static/js/main.4442de97.chunk.js",
+    "main.js.map": "/productivity-planner/static/js/main.4442de97.chunk.js.map",
     "runtime-main.js": "/productivity-planner/static/js/runtime-main.6cb0376d.js",
     "runtime-main.js.map": "/productivity-planner/static/js/runtime-main.6cb0376d.js.map",
     "static/js/2.a8658443.chunk.js": "/productivity-planner/static/js/2.a8658443.chunk.js",
     "static/js/2.a8658443.chunk.js.map": "/productivity-planner/static/js/2.a8658443.chunk.js.map",
     "index.html": "/productivity-planner/index.html",
-    "precache-manifest.cf8d9da1eba30d969c32cf39cc017f0c.js": "/productivity-planner/precache-manifest.cf8d9da1eba30d969c32cf39cc017f0c.js",
+    "precache-manifest.117956232c5f8fbf6a53736cc975d770.js": "/productivity-planner/precache-manifest.117956232c5f8fbf6a53736cc975d770.js",
     "service-worker.js": "/productivity-planner/service-worker.js",
     "static/css/main.173b4927.chunk.css.map": "/productivity-planner/static/css/main.173b4927.chunk.css.map",
     "static/js/2.a8658443.chunk.js.LICENSE.txt": "/productivity-planner/static/js/2.a8658443.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.6cb0376d.js",
     "static/js/2.a8658443.chunk.js",
     "static/css/main.173b4927.chunk.css",
-    "static/js/main.0c576283.chunk.js"
+    "static/js/main.4442de97.chunk.js"
   ]
 }
